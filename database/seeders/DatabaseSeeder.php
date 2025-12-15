@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         // ✅ Super Admin Seeder
         $this->call([
             SuperAdminSeeder::class,
+            SettingsSeeder::class,
         ]);
 
         // ✅ Future: Settings Seeder (Registration Mode, etc.)
