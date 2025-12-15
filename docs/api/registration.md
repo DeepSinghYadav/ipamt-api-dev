@@ -48,4 +48,5 @@ Error Responses
 
     Validation errors
 
+---
 
