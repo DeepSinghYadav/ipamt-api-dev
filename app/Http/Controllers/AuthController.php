@@ -45,4 +45,39 @@ class AuthController extends Controller
             ], 400);
         }
     }
+
+    /**
+     * login user
+     */
+
+    public function login(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required'
+        ]);
+
+        if (!auth()->attempt($request->only('email', 'password'))) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Invalid credentials'
+            ], 401);
+        }
+
+        $user = auth()->user();
+
+        // Sanctum token generate
+        $token = $user->createToken('api_token')->plainTextToken;
+
+        return response()->json([
+            'status' => true,
+            'message' => 'Login successful',
+            'token' => $token,
+            'user' => $user
+        ]);
+    }
+
+
+
+
 }

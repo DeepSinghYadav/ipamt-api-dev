@@ -17,15 +17,8 @@ use Laravel\Sanctum\HasApiTokens;
  */
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * These fields can be filled during user creation or update.
-     *
-     * @var array<int, string>
-     */
     protected $fillable = [
         'name',
         'email',
@@ -35,21 +28,11 @@ class User extends Authenticatable
         'team_id',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays and JSON responses.
-     *
-     * @var array<int, string>
-     */
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
-    /**
-     * The attributes that should be type-casted automatically.
-     *
-     * @return array<string, string>
-     */
     protected function casts(): array
     {
         return [
@@ -58,29 +41,14 @@ class User extends Authenticatable
         ];
     }
 
-    /**
-     * Relationship: User who invited this user.
-     *
-     * Example:
-     * $user->inviter->name;
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
     public function inviter()
     {
         return $this->belongsTo(User::class, 'invited_by');
     }
 
-    /**
-     * Relationship: Users invited by this user.
-     *
-     * Example:
-     * $user->invitees; // returns collection of users
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
     public function invitees()
     {
         return $this->hasMany(User::class, 'invited_by');
     }
 }
+
