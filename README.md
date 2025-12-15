@@ -1,59 +1,157 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# IPAMT – Intelligent Property & Agent Management Tool  
+A modular, scalable, and future‑proof backend system designed for real‑estate builders, marketing teams, and multi‑level agent networks.  
+IPAMT का उद्देश्य है एक ऐसा unified system बनाना जो registration, team hierarchy, commission rules, और admin‑controlled settings को एक ही जगह manage कर सके।
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+---
 
-## About Laravel
+## ✅ Phase 1 – Authentication & Team Management (Current Phase)
+- User Registration (Open + Invite Mode)
+- Login with Sanctum Token
+- Invite Code System (Auto‑Generated)
+- Parent–Child (Inviter → Invitee) Mapping
+- Team ID Inheritance
+- Admin‑Controlled Registration Mode
+- Clean Architecture (Controller → Service → Repository)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## ✅ Phase 2 – Property & Sales Module (Upcoming)
+- Property Master
+- Unit / Inventory Management
+- Sales Entry & Verification
+- Booking Status Flow
+- Customer KYC & Document Upload
+- Activity Logs
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## ✅ Phase 3 – Commission Engine (Future Module)
+- Multi‑Level Commission Rules
+- Builder‑Controlled Commission Slabs
+- Level Limit (Admin Controlled)
+- Refund / Reversal Policy
+- Payout Cycle
+- Commission Logs & Reports
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## ✅ Architecture
+- Fully Modular Structure  
+- Service + Repository Pattern  
+- API Versioning (v1, v2…)  
+- Clean Database Design  
+- Future‑Proof Module Plug‑in System  
+- Laravel Best Practices  
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## ✅ Tech Stack
+- Laravel 12+
+- PHP 8.2+
+- MySQL / MariaDB
+- REST APIs
+- Sanctum Authentication
+- Modular Folder Structure
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## ✅ Features
+- Multi‑level invite chain  
+- Admin‑controlled system behavior  
+- Flexible settings for different business models  
+- Zero‑downtime module upgrades  
+- Multi‑client ready architecture  
+- Clean, scalable backend foundation  
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 📁 Project Folder Structure
 
-## Code of Conduct
+.
+ * [app](./app)
+   * [Console](./app/Console)
+   * [Exceptions](./app/Exceptions)
+   * [Http](./app/Http)
+     * [Controllers](./app/Http/Controllers)
+     * [Middleware](./app/Http/Middleware)
+     * [Kernel.php](./app/Http/Kernel.php)
+   * [Models](./app/Models)
+   * [Providers](./app/Providers)
+   * [Services](./app/Services)
+ * [bootstrap](./bootstrap)
+   * [app.php](./bootstrap/app.php)
+ * [config](./config)
+ * [database](./database)
+   * [migrations](./database/migrations)
+   * [seeders](./database/seeders)
+   * [factories](./database/factories)
+ * [public](./public)
+   * [index.php](./public/index.php)
+ * [resources](./resources)
+   * [views](./resources/views)
+   * [js](./resources/js)
+   * [css](./resources/css)
+ * [routes](./routes)
+   * [api.php](./routes/api.php)
+   * [web.php](./routes/web.php)
+   * [channels.php](./routes/channels.php)
+ * [storage](./storage)
+ * [tests](./tests)
+ * [vendor](./vendor)
+ * [.env](./.env)
+ * [.gitignore](./.gitignore)
+ * [artisan](./artisan)
+ * [composer.json](./composer.json)
+ * [composer.lock](./composer.lock)
+ * [package.json](./package.json)
+ * [README.md](./README.md)
+ * [LICENSE](./LICENSE)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🛣️ Project Roadmap
 
-## License
+### ✅ Phase 1 — Authentication & Team System (Current)
+- [x] Registration API (Open + Invite Mode)
+- [x] Login API (Sanctum Token)
+- [x] User Model Enhancements
+- [x] Invite Code Generation
+- [x] Inviter → Invitee Mapping
+- [x] Team ID Inheritance
+- [ ] Admin Settings Module
+- [ ] Downline / Upline Tree API
+- [ ] Activity Logs
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### ✅ Phase 2 — Property Module
+- [ ] Property Master
+- [ ] Unit / Inventory Management
+- [ ] Sales Entry API
+- [ ] Sale Verification Flow
+
+### ✅ Phase 3 — Commission Engine
+- [ ] Commission Rules
+- [ ] Multi‑Level Commission Engine
+- [ ] Commission Calculation Flow
+
+### ✅ Phase 4 — Payout System
+- [ ] Payout Cycle
+- [ ] Payout Approval Flow
+
+### ✅ Phase 5 — Admin Panel (UI)
+- [ ] Dashboard
+- [ ] Team Tree UI
+- [ ] Sales UI
+- [ ] Commission UI
+- [ ] Settings UI
+
+---
+
+## ✅ License
+This project is licensed under the MIT License.
+
+---
+
+## ✅ Author
+Developed by **Deep Singh Yadav**  
+Founder – DSY Digital  
