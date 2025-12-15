@@ -14,7 +14,6 @@ POST /api/register
 - Inviter → Invitee mapping
 - Team ID inheritance
 
-## Request Body
 ```json
 {
   "name": "Deep Test",
@@ -22,9 +21,10 @@ POST /api/register
   "password": "123456",
   "invite_code": "OPTIONAL_OR_REQUIRED"
 }
-
+```
 Success Response
 
+```json
 {
   "status": true,
   "message": "Registration successful",
@@ -37,7 +37,7 @@ Success Response
     "team_id": 1
   }
 }
-
+```
 Error Responses
 
     Missing fields
